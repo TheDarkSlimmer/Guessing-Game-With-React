@@ -1,9 +1,10 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <Fragment>
-
+      <Home />
     </Fragment>
   );
 }

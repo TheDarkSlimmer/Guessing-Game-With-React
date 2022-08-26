@@ -1,0 +1,84 @@
+
+.homeBetween{
+    display: flex;
+    justify-content: space-between;
+}
+.homeHeader{
+    text-align: center;
+}
+.buttonAgain{
+    padding: 10px 60px;
+    font-size: 60px;
+    border-radius: 50px;
+    background-color: #629eff;
+    font-family: Gabriola;
+    font-weight: bold;
+    justify-self: start;
+    box-shadow: 1px 1px 10px 5px black;
+}
+.buttonAgain:hover{
+transform: translateY(-3px);
+box-shadow: 0px 5px 10px 5px;
+}
+.buttonAgain:active{
+transform: translateY(3px);
+box-shadow: 0px 0px 10px 1px;
+}
+.number{
+    font-size: 100px;
+    text-align: center;
+    font-family: Gabriola;
+    font-weight: bold;
+    margin: auto;
+    border: 3px solid black;
+    width: 200px;
+    padding: 10px 60px;
+    border-radius: 50px;
+    margin-bottom: 100px;
+    background-color: #fffffc;
+}
+.homeMain{
+    display: flex;
+    justify-content: space-around;
+}
+.left{
+    text-align: center;
+}
+.left input{
+    font-family:Gabriola;
+    text-align: center;
+   font-size: 100px;
+   width:300px;
+   height:200px;
+   border-radius: 50px;
+   border: 5px black solid;
+   font-weight: bold;
+}
+.left button{
+    font-size: 50px;
+    font-family: Gabriola;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 10px 5px black;
+    margin-top: 30px;
+    background-color: #ffa7ff;
+}
+.left button:hover{
+    transform: translateY(-3px);
+box-shadow: 0px 5px 10px 5px;
+    
+}
+.left button:active{
+    transform: translateY(3px);
+box-shadow: 0px 0px 10px 1px;
+}
+.right .message{
+    text-align: center;
+    border: 3px solid black;
+    padding: 10px 30px;
+    background-color: #9bf6ff;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
