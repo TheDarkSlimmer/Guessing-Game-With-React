@@ -21,7 +21,6 @@ export default function Home(props) {
     setColor("#99f6ff");
   }
   const errorCheck = () => {
-    console.log(rightNumber);
     if (!guess) {
       setMessage("❌No Number");
       setColor("#fff");
@@ -57,45 +56,50 @@ export default function Home(props) {
     setGuess(e.target.value);
   }
   return (
-    <Fragment>
-      <div className={homeStyles.homeHeader}>
-        <h1>Guess My Number!</h1>
-        <div className={homeStyles.homeBetween}>
-          <button className={homeStyles.buttonAgain} onClick={againButton}>
-            Again!
-          </button>
-          <p>(Between 1 and 50)</p>
-        </div>
-        <div className={homeStyles.number}>{number}</div>
-      </div>
-      <div className={homeStyles.homeMain}>
-        <div className={homeStyles.gameContainer}>
-          <div className={homeStyles.left}>
-            <input
-              type="number"
-              className={homeStyles.guess}
-              onChange={numberHandler}
-              value={guess}
-            />
-            <br />
-            <button className={homeStyles.check} onClick={errorCheck}>
-              check!
+    <div className="home-main">
+      <div className="home-container">
+        <div className={homeStyles.homeHeader}>
+          <h1>Guess My Number!</h1>
+          <div className={homeStyles.homeBetween}>
+            <button className={homeStyles.buttonAgain} onClick={againButton}>
+              Again!
             </button>
+            <p>(Between 1 and 50)</p>
+          </div>
+          <div className={homeStyles.number}>{number}</div>
+        </div>
+        <div className={homeStyles.homeMain}>
+          <div className={homeStyles.gameContainer}>
+            <div className={homeStyles.left}>
+              <input
+                type="number"
+                className={homeStyles.guess}
+                onChange={numberHandler}
+                value={guess}
+              />
+              <br />
+              <button className={homeStyles.check} onClick={errorCheck}>
+                check!
+              </button>
+            </div>
+          </div>
+          <div className={homeStyles.right}>
+            <p
+              className={homeStyles.message}
+              style={{ backgroundColor: color }}
+            >
+              {message}
+            </p>
+            <p className={homeStyles.labelScore}>
+              💯 Score: <span className={homeStyles.score}>{score}</span>
+            </p>
+            <p className={homeStyles.labelHighscore}>
+              🥇 Highscore:{" "}
+              <span className={homeStyles.highscore}>{highscore}</span>
+            </p>
           </div>
         </div>
-        <div className={homeStyles.right}>
-          <p className={homeStyles.message} style={{ backgroundColor: color }}>
-            {message}
-          </p>
-          <p className={homeStyles.labelScore}>
-            💯 Score: <span className={homeStyles.score}>{score}</span>
-          </p>
-          <p className={homeStyles.labelHighscore}>
-            🥇 Highscore:{" "}
-            <span className={homeStyles.highscore}>{highscore}</span>
-          </p>
-        </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
