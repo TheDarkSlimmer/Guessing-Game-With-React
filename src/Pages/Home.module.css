@@ -1,20 +1,30 @@
-
-.homeMain{
+.homeContainerMain {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
 
-.homeBetween{
+.homeContainerMain::-webkit-scrollbar {
+    display: none;
+}
+
+.homeContainer {
+    width: 90%;
+}
+
+.homeBetween {
     display: flex;
     justify-content: space-between;
 }
-.homeHeader{
+
+.homeHeader {
     text-align: center;
 }
-.buttonAgain{
+
+.buttonAgain {
     padding: 0.625rem 3.75rem;
-    font-size: 3.75rem;
+    font-size: 3rem;
     border-radius: 50px;
     background-color: #629eff;
     font-family: Gabriola;
@@ -22,47 +32,69 @@
     justify-self: start;
     box-shadow: 1px 1px 10px 5px black;
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
 }
-.buttonAgain:hover{
-transform: translateY(-3px);
-box-shadow: 0px 5px 10px 5px;
+
+.buttonAgain:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px 5px;
 }
-.buttonAgain:active{
-transform: translateY(3px);
-box-shadow: 0px 0px 10px 1px;
+
+.buttonAgain:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 10px 1px;
 }
-.number{
-    font-size: 6.25rem;
+
+.number span {
+   padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number {
+    font-size: 5rem;
     text-align: center;
     font-family: Gabriola;
     font-weight: bold;
     margin: auto;
     border: 3px solid black;
-    width: 12.5rem;
+    width: 12rem;
     padding: 0.625rem 3.75rem;
     border-radius: 50px;
     margin-bottom: 6.25rem;
     background-color: #fffffc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.homeMain{
+
+.homeMain {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
 }
-.left{
+
+.left {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
-.left input{
-    font-family:Gabriola;
+
+.left input {
+    font-family: Gabriola;
     text-align: center;
-   font-size: 6.25rem;
-   width:18.75rem;
-   height:12.5rem;
-   border-radius: 50px;
-   border: 5px black solid;
-   font-weight: bold;
+    font-size: 6.25rem;
+    width: 15rem;
+    height: 12rem;
+    border-radius: 50px;
+    border: 5px black solid;
+    font-weight: bold;
 }
-.left button{
-    font-size: 3.125rem;
+
+.left button {
+    font-size: 3rem;
     font-family: Gabriola;
     font-weight: bold;
     padding: 0.625rem 2.5rem;
@@ -70,18 +102,22 @@ box-shadow: 0px 0px 10px 1px;
     box-shadow: 1px 1px 10px 5px black;
     margin-top: 1.875rem;
     background-color: #ffa7ff;
-     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
 }
-.left button:hover{
+
+.left button:hover {
     transform: translateY(-2px);
-box-shadow: 0px 1px 10px 0px;
-    
+    box-shadow: 0px 1px 10px 0px;
+
 }
-.left button:active{
+
+.left button:active {
     transform: translateY(3px);
-box-shadow: 0px 0px 10px 1px;
+    box-shadow: 0px 0px 10px 1px;
 }
-.right .message{
+
+.right .message {
     text-align: center;
     border: 3px solid black;
     padding: 10px 30px;
@@ -92,44 +128,224 @@ box-shadow: 0px 0px 10px 1px;
 
 
 /*Responsivenes*/
+/*Smaller Laptop screens*/
+@media (max-width:1450px) {
+    .buttonAgain {
+        font-size: 2.5rem;
+    }
 
-/*Tablet Screen*/
-@media (max-width:768px){
-    .buttonAgain{
+    .homeHeader h1 {
+        font-size: 5rem;
+    }
+
+    .number {
+        font-size: 4.5rem;
+        width: 11rem;
+    }
+
+    .left input {
+        width: 13rem;
+        height: 11rem;
+    }
+
+    .left button {
         font-size: 2.5rem;
     }
-    .left button{
+
+    .message {
         font-size: 2.5rem;
     }
-    .left input{
-        font-size: 4rem;
-        width: 12rem;
-        height: 8rem;
-    }
-    .right .message{
+
+    .labelScore {
         font-size: 2.5rem;
     }
-    .number{
-        display: grid;
+
+    .labelHighscore {
+        font-size: 2.5rem;
+    }
+
+    .rule {
         font-size: 3rem;
-        width: 12rem;
-        height: 10rem;
-        align-items: center;
-    }
-    .labelScore{
-        font-size: 2.5rem;
-        justify-self: center;
-    }
-    .labelHighscore{
-        font-size: 2.5rem;
-        justify-self: center;
-    }
-    .homeMain{
-        display: flex;
-        justify-content: space-between;
-    }
-    .right{
-        display: grid;
     }
 }
 
+@media (max-width:1050px) {
+    .homeHeader h1 {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:750px) {
+    .homeContainer {
+        padding: 1rem;
+    }
+
+    .homeHeader h1 {
+        margin-bottom: 2rem;
+    }
+
+    .homeBetween {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .buttonAgain {
+        margin-top: 0rem;
+        font-weight: 700;
+        font-size: 2rem;
+        width: 8rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homeMain {
+        flex-direction: column-reverse;
+    }
+
+    .number {
+        margin-bottom: 2rem;
+    }
+
+    .left {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .left input {
+        width: 10rem;
+        height: 8rem;
+        font-size: 5rem;
+    }
+
+    .left button {
+        margin-top: 0rem;
+        font-weight: 700;
+        font-size: 2rem;
+        width: 8rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .message {
+        font-size: 2rem;
+    }
+
+    .labelHighscore {
+        font-size: 1.8rem;
+    }
+
+    .labelScore {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .homeHeader h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeHeader h1 {
+        font-size: 3.5rem;
+    }
+
+    .rule {
+        font-size: 2.8rem
+    }
+}
+
+@media (max-width: 480px) {
+    .homeHeader h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .homeHeader h1 {
+        font-size: 3rem;
+    }
+
+    .rule {
+        font-size: 2.5rem
+    }
+}
+
+@media (max-width: 400px) {
+    .homeHeader h1 {
+        font-size: 2.5rem;
+    }
+
+    .rule {
+        font-size: 2rem
+    }
+
+
+
+
+    .left input {
+        width: 8rem;
+        height: 6rem;
+        border-radius: 20px;
+        font-size: 3.5rem;
+    }
+
+    .left button {
+        font-size: 1.8rem;
+        padding: 1rem;
+        border-radius: 20px
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .message {
+        font-size: 1.5rem;
+        border-radius: 20px !important;
+    }
+
+    .number {
+        border-radius: 20px;
+        width: 8rem;
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonAgain {
+        border-radius: 20px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .homeHeader h1 {
+        font-size: 2rem;
+    }
+
+    .rule {
+        font-size: 1.5rem
+    }
+}

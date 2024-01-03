@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import homeStyles from "../Pages/Home.module.css";
 
 export default function Home(props) {
@@ -56,32 +56,31 @@ export default function Home(props) {
     setGuess(e.target.value);
   }
   return (
-    <div className="home-main">
-      <div className="home-container">
+    <div className={homeStyles.homeContainerMain}>
+      <div className={homeStyles.homeContainer}>
         <div className={homeStyles.homeHeader}>
           <h1>Guess My Number!</h1>
           <div className={homeStyles.homeBetween}>
             <button className={homeStyles.buttonAgain} onClick={againButton}>
               Again!
             </button>
-            <p>(Between 1 and 50)</p>
+            <p className={homeStyles.rule}>(Between 1 and 50)</p>
           </div>
-          <div className={homeStyles.number}>{number}</div>
+          <div className={homeStyles.number}>
+            <span>{number}</span>
+          </div>
         </div>
         <div className={homeStyles.homeMain}>
-          <div className={homeStyles.gameContainer}>
-            <div className={homeStyles.left}>
-              <input
-                type="number"
-                className={homeStyles.guess}
-                onChange={numberHandler}
-                value={guess}
-              />
-              <br />
-              <button className={homeStyles.check} onClick={errorCheck}>
-                check!
-              </button>
-            </div>
+          <div className={homeStyles.left}>
+            <input
+              type="number"
+              className={homeStyles.guess}
+              onChange={numberHandler}
+              value={guess}
+            />
+            <button className={homeStyles.check} onClick={errorCheck}>
+              check!
+            </button>
           </div>
           <div className={homeStyles.right}>
             <p
