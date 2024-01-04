@@ -41,28 +41,20 @@
     box-shadow: 0px 0px 10px 1px;
 }
 
-.number span {
-   padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .number {
     font-size: 5rem;
     text-align: center;
     font-family: Gabriola;
     font-weight: bold;
-    margin: auto;
+    margin: 1rem auto 3.5rem auto;
     border: 3px solid black;
     width: 12rem;
-    padding: 0.625rem 3.75rem;
     border-radius: 50px;
-    margin-bottom: 6.25rem;
     background-color: #fffffc;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: .5rem;;
 }
 
 .homeMain {
