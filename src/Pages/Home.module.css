@@ -5,10 +5,6 @@
     overflow-y: scroll;
 }
 
-.homeContainerMain::-webkit-scrollbar {
-    display: none;
-}
-
 .homeContainer {
     width: 90%;
 }
