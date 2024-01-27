@@ -1,4 +1,4 @@
-# Gessuing Game
+# Guessing Game
 Guess a number between 1 and 50. The lesses the guesses, the higher the score. Once you have the correct guess, the hideen number will be revealed and you can play again in hopes of beating your high sccore
 
 # Tech Stack
