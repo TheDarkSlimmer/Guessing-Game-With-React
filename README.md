@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Gessuing Game
+Guess a number between 1 and 50. The lesses the guesses, the higher the score. Once you have the correct guess, the hideen number will be revealed and you can play again in hopes of beating your high sccore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Tech Stack
+React JS
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm-install`
+First run npm install to install all dependencies
 
 ### `npm start`
 
